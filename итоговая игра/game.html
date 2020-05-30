@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<style class="css">
+		.menu {
+			height: 760px;
+			width: 480px;
+			background-size: 100% 100%;
+			background-image: url(3.jpg);
+			padding-top: 40px;
+		}
+		.menu-btn {
+			height: 80px;
+			width: 300px;
+			background: gray;
+			margin-top: 40px;
+			padding-top: 6px;
+		}
+		.menu-text1 {
+			height: 200px;
+			width: 400px;
+			text-align: center;
+			font-size: 47px;
+			font-family: Arial;
+		}
+		.menu-text2 {
+			font-size: 50px;
+			text-align: center;
+			font-family: Arial;
+		}
+		.menu-play {
+			height: 760px;
+			width: 480px;
+			background-size: 100% 100%;
+			background-image: url(3.jpg);
+			display: none;
+		}
+		.play-avatar {
+			height: 60px;
+			width: 60px;
+			background-size: 100% 100%;
+			background-image: url(1.jpg);
+			margin-left: 20px;
+		}
+		.nickname {
+			font-size: 40px;
+			position: absolute;
+			left: 90px;
+			top: 20px;
+			font-family: Arial;
+		}
+		.money-img {
+			height: 40px;
+			width: 40px;
+			background-size: 100% 100%;
+			background-image: url(2.png);
+			margin-left: 300px;
+		}
+		.money-text {
+			font-size: 24px;
+			margin-left: 5px;
+			font-family: Arial;
+		}
+		.money-text2 {
+			font-size: 24px;
+			margin-left: 5px;
+			font-family: Arial;
+		}
+		.money-text3 {
+			font-size: 24px;
+			margin-left: 5px;
+			font-family: Arial;
+		}
+		.topic-img {
+			height: 40px;
+			width: 40px;
+			margin-top: 10px;
+			margin-left: 30px;
+			background-size: 100% 100%;
+			background-image: url(2.png);
+		}
+		.topic-lock {
+			height: 40px;
+			width: 40px;
+			margin-top: 10px;
+			margin-left: 5px;
+			background-size: 100% 100%;
+			background-image: url(1.png);
+		}
+		.topic-text {
+			padding-top: 10px;
+			font-size: 30px;
+			color: black;
+			display: none;
+			font-family: Arial;
+		}
+		.topic-text-lock {
+			padding-top: 10px;
+			font-size: 30px;
+			color: black;
+			display: block;
+			font-family: Arial;
+		}
+		.topic-text-lock-soon {
+			padding-top: 10px;
+			font-size: 30px;
+			color: black;
+			display: block;
+			font-family: Arial;
+		}
+		.topic-lock-soon {
+			height: 40px;
+			width: 40px;
+			margin-top: 10px;
+			margin-left: 5px;
+			background-size: 100% 100%;
+			background-image: url(1.png);
+		}
+		.menu-game {
+			height: 760px;
+			width: 480px;
+			background-size: 100% 100%;
+			background-image: url(3.jpg);
+			display: none;
+		}
+		.back-btn {
+			height: 40px;
+			width: 40px;
+			color: blue;
+			margin-left: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-size: 100% 100%;
+			background-image: url(4.png);
+		}
+		.back-btn-quest {
+			height: 40px;
+			width: 40px;
+			color: blue;
+			margin-left: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-size: 100% 100%;
+			background-image: url(4.png);
+		}
+		.question {
+			height: 90px;
+			width: 90px;
+			margin-left: 24px;
+			background-size: 100% 100%;
+			background-image: url(3.png);
+		}
+		.question-lockY {
+			height: 90px;
+			width: 90px;
+			margin-left: 24px;
+			background-size: 100% 100%;
+			background-image: url(2.jpg);
+			display: none;
+		}
+		.question-lockN {
+			height: 90px;
+			width: 90px;
+			margin-left: 24px;
+			background-size: 100% 100%;
+			background-image: url(5.png);
+			display: none;
+		}
+		.question1 {
+			height: 90px;
+			width: 90px;
+			margin-left: 24px;
+			background-size: 100% 100%;
+			background-image: url(3.png);
+		}
+		.question2 {
+			height: 90px;
+			width: 90px;
+			margin-left: 24px;
+			background-size: 100% 100%;
+			background-image: url(3.png);
+		}
+		.question3 {
+			height: 90px;
+			width: 90px;
+			margin-left: 24px;
+			background-size: 100% 100%;
+			background-image: url(3.png);
+		}
+		.question-text {
+			font-size: 24px;
+			text-align: center;
+			font-family: Arial;
+			margin-left: 15px;
+			color: black;
+		}
+		.question-text2 {
+			font-size: 36px;
+			font-family: Arial;
+			text-align: center;
+		}
+		.game-name {
+			font-size: 36px;
+			font-family: Arial;
+			position: absolute;
+			left: 180px;
+			top: 0px;
+		}
+		.question-menu {
+			height: 760px;
+			width: 480px;
+			background-size: 100% 100%;
+			background-image: url(3.jpg);
+			display: none;
+		}
+		.question-btn1 {
+			
+			width: 360px;
+			background: gray;
+			margin-top: 40px;
+			padding-top: 6px;
+			padding-bottom: 10px;
+			font-size: 24px;
+			text-align: center;
+			display: none;
+		}
+		.question-btn2 {
+			
+			width: 360px;
+			background: gray;
+			margin-top: 40px;
+			padding-top: 6px;
+			padding-bottom: 10px;
+			font-size: 24px;
+			text-align: center;
+			display: none;
+		}
+		.question-btn3 {
+			
+			width: 360px;
+			background: gray;
+			margin-top: 40px;
+			padding-top: 6px;
+			padding-bottom: 10px;
+			font-size: 24px;
+			text-align: center;
+			display: none;
+		}
+		.question-btn4 {
+			
+			width: 360px;
+			background: gray;
+			margin-top: 40px;
+			padding-top: 6px;
+			padding-bottom: 10px;
+			font-size: 24px;
+			text-align: center;
+			display: none;
+		}
+		.question-quest {
+			font-family: Arial;
+			font-size: 20px;
+			text-align: center;
+			display: none;
+		}
+		.profile {
+			height: 760px;
+			width: 480px;
+			background-size: 100% 100%;
+			background-image: url(3.jpg);
+			display: none;
+			padding-top: 10px;
+		}
+		.profile-back {
+			height: 40px;
+			width: 40px;
+			color: blue;
+			margin-left: 20px;
+			margin-bottom: 10px;
+			background-size: 100% 100%;
+			background-image: url(4.png);
+		}
+		.profile-avatar {
+			height: 200px;
+			width: 200px;
+			background-size: 100% 100%;
+			background-image: url(1.jpg);
+			padding-top: 170px;
+		}
+		.profile-edit {
+			height: 30px;
+			width: 30px;
+			margin-left: 170px;
+			background-size: 100% 100%;
+			background-image: url(6.png);
+		}
+		.profile-nickname {
+			font-size: 40px;
+			font-family: Arial;
+			margin-top: 5px;
+			text-align: center;
+		}
+		.text-reward {
+			font-size: 30px;
+			font-family: Arial;
+		}
+		.text-reward2 {
+			font-size: 30px;
+			font-family: Arial;
+			text-align: center;
+		}
+		.reward-film {
+			height: 150px;
+			width: 150px;
+			margin-left: 60px;
+			background-size: 100% 100%;
+			background-image: url(no.png);
+		}
+		.film-score-t {
+			text-align: center;
+			font-size: 35px;
+			margin-left: 60px;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="profile">
+		<div class="profile-back">
+			
+		</div>		
+		<div class="profile-avatar mx-auto rounded-pill">
+			<div class="profile-edit">
+				
+			</div>
+		</div>
+		<div class="profile-nickname">
+			Darth Vader
+		</div>
+		<div class="text-reward ml-3 ">
+			Ваши награды:
+		</div>
+		<div style="height: 180px; width: 200px;">
+			<div class="reward-film">
+				
+			</div>
+			<p class="film-score-t">
+				0 
+			</p>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menu-text1 mx-auto">
+			Узнай свои знания в той или иной сфере
+		</div>
+		<div class="menu-btn rounded-pill mx-auto">
+			<h1 class="menu-text2">
+				Играть
+			</h1>
+		</div>
+		<div class="menu-btn rounded-pill mx-auto">
+			<h1 class="menu-text2">
+				Правила
+			</h1>
+		</div>
+		<div class="menu-btn rounded-pill mx-auto">
+			<h1 class="menu-text2">
+				Выход
+			</h1>
+		</div>
+	</div>
+
+
+	<div class="menu-play pt-3">
+		<div class="d-flex">
+			<div class="play-avatar rounded-pill">	
+			</div>	
+			<div class="nickname mt-0">
+				Darth Vader
+			</div>
+			<div class="money-img mt-2">
+			</div>
+			<div class="money-text mt-2">
+				0
+			</div>
+		</div>
+		<div class="d-flex mt-3">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Фильмы
+			</h1>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Космос
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Космос
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Астрономия
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Астрономия
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Литература
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Литература
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Музыканты
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Музыканты
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				История
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				История
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Собаки
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Собаки
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Цветы
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Цветы
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Marvel
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Marvel
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="topic-img">
+			</div>
+			<h1 class="topic-text mt-1 ml-2">
+				Катастрофы
+			</h1>
+			<h1 class="topic-text-lock-soon mt-1 ml-2">
+				Катастрофы
+			</h1>
+			<div class="topic-lock-soon">
+			</div>
+		</div>
+	</div>
+	<div class="menu-game">
+		<div class="d-flex">
+			<button class="back-btn">
+			</button>
+			<div class="game-name">
+				Фильмы
+			</div>
+			<div class="money-img mt-2">
+			</div>
+			<div class="money-text2 mt-2">
+				0
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question rounded-pill">
+				</div>
+				<div class="question-lockY rounded-pill">
+					
+				</div>
+				<div class="question-lockN rounded-pill">
+					
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="question-menu">
+		<div class="d-flex">
+			<button class="back-btn-quest">
+			</button>
+			<div class="game-name">
+				Фильмы
+			</div>
+			<div class="money-img mt-2">
+			</div>
+			<div class="money-text3 mt-2">
+				0
+			</div>
+		</div>
+		<p class="mx-auto question-text2">
+			Вопрос
+		</p>
+		<!-- 20 кнопок вопроса -->
+		<p class="question-quest mt-2">
+			Сколько фильмов в трилогии Гарри Поттера?
+		</p>
+		<p class="question-quest mt-2">
+			Сколько фильмов в трилогии Звездных войн?
+		</p>
+		<p class="question-quest mt-2">
+			Какое кол-во дублеров у Джеки Чана?
+		</p>
+		<p class="question-quest mt-2">
+			Какие очки были на терминаторе в первой части, после его перемещения во времени?
+		</p>
+		<p class="question-quest mt-2">
+			Кто, кроме Гарри Поттера, мог быть избранным?
+		</p>
+		<p class="question-quest mt-2">
+			Сколько крестражей было у того чьё имя нельзя называть?
+		</p>
+		<p class="question-quest mt-2">
+			Из чего были сделаны чаши из источника молодости в Пиратах Карибского Моря?
+		</p>
+		<p class="question-quest mt-2">
+			Из чего было сделана палочка Гарри Поттера?
+		</p>
+
+
+		<p class="question-quest mt-2">
+			В каком году был снят фильм "Титаник"?
+		</p>
+		<p class="question-quest mt-2">
+			Какой кассовый сбор фильма "Мстители: Финал"?
+		</p>
+		<p class="question-quest mt-2">
+			Сколько фильмов во времена СССР смогли выйти на показ без цензуры?
+		</p>
+		<p class="question-quest mt-2">
+			Зачем Танос снял с перчатки один из камней, когда Капитан Марвел схватила его за перчатку?
+		</p>
+		<p class="question-quest mt-2">
+			Кто играл Шерлока Холмса в сериале Шерлок Холмс 2010 года?
+		</p>
+		<p class="question-quest mt-2">
+			Сколько фильмов во властелине колец?
+		</p>
+		<p class="question-quest mt-2">
+			Кто сыграл Голлума?
+		</p>
+		<p class="question-quest mt-2">
+			Какого цвета глаза Оно?
+		</p>
+
+
+		<p class="question-quest mt-2">
+			Кто нарисовал картину ногой Розы в Титанике?
+		</p>
+		<p class="question-quest mt-2">
+			Как назывался фильм, который вышел на показ без цензуры во времена СССР?
+		</p>
+		<p class="question-quest mt-2">
+			Какой фильм был самым первым?
+		</p>
+		<p class="question-quest mt-2">
+			Почему Чарли Чаплин занял лишь 3 место в конкурсе на схожесть с Чарли Чаплином?
+		</p>
+
+
+		<!-- 20 кнопок вопросов 1 -->
+		<!-- 100 -->
+		<div class="question-btn1 mx-auto rounded-pill">
+			5
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			8
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			5
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Круглые
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Рон Уизли
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			4
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Из золота
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Перо феникса
+		</div>
+		<!-- 200 -->
+		<div class="question-btn1 mx-auto rounded-pill">
+			1995
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			2,7$ млрд
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			0
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Камень отдельно гораздно сильнее, чем в перчатке
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Бенедикт Камбербэтч
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			6
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Энди Сёркинс
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Кровавые
+		</div>
+		<!-- 300 -->
+		<div class="question-btn1 mx-auto rounded-pill">
+			Брэд Пит
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Бриллиантовая рука
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Сцены в саду Раундхэй
+		</div>
+		<div class="question-btn1 mx-auto rounded-pill">
+			Он был не похож на самого себя движениями
+		</div>
+
+		<!-- 20 кнопок вопросов 2 -->
+		<!-- 100 -->
+		<div class="question-btn2 mx-auto rounded-pill">
+			6
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			10
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			7
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			В форме звёзд
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Невилл Долгопупс
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			5
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Из свинца
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Великое древо
+		</div>
+		<!-- 200 -->
+		<div class="question-btn2 mx-auto rounded-pill">
+			1997
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			2,7$ млн
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			1
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Негоже трогать перчатку самой неотвратимости
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Бэзил Рэтбоун
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			5
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Энди Сёркис
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Жёлто-красные
+		</div>
+		<!-- 300 -->
+		<div class="question-btn2 mx-auto rounded-pill">
+			Профессиональный художник
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Собачье сердце
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Прибытие поезда на вокзал Ла-Сьота
+		</div>
+		<div class="question-btn2 mx-auto rounded-pill">
+			Его глаза были разными на фильме и в реальности
+		</div>
+
+		<!-- 20 кнопок вопросов 3 -->
+		<!-- 100 -->
+		<div class="question-btn3 mx-auto rounded-pill">
+			7
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			11
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			8
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Чёрные пафосные
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Флёр Делакур
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			6
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Из бронзы
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Чистая магия 
+		</div>
+		<!-- 200 -->
+		<div class="question-btn3 mx-auto rounded-pill">
+			1999
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			3,4$ млрд
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			2
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Чтобы она перестала получать силу от перчатки
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Артур Уонтнер
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			3
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Энди Сёркиск
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Золотые
+		</div>
+		<!-- 300 -->
+		<div class="question-btn3 mx-auto rounded-pill">
+			Режиссёр
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Джентельмены удачи
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Шалости
+		</div>
+		<div class="question-btn3 mx-auto rounded-pill">
+			Из-за его характера, который отличался в фильме
+		</div>
+
+		<!-- 20 кнопок вопросов 4 -->
+		<!-- 100 -->
+		<div class="question-btn4 mx-auto rounded-pill">
+			8
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			14
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			0
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Самые обычные
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Драко Малфой
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			7
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Из серебра
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Обычная древесина
+		</div>
+		<!-- 200 -->
+		<div class="question-btn4 mx-auto rounded-pill">
+			2002
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			3,4$ млн
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			3
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			На случай если она выхватит перчатку, она не могла использовать её
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Роберт Джон Дауни-младший
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			4
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Энди Сёркикс
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Ржавые
+		</div>
+		<!-- 300 -->
+		<div class="question-btn4 mx-auto rounded-pill">
+			Кейт Уинслет
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Операция Ы
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Вид харьковского вокзала в момент отхода поезда с находящимся на платформе начальством
+		</div>
+		<div class="question-btn4 mx-auto rounded-pill">
+			Он неугодил своим характером жюри
+		</div>
+
+	</div>
+	<div class="menu-game">
+		<div class="d-flex">
+			<button class="back-btn">
+			</button>
+			<div class="game-name">
+				Космос
+			</div>
+			<div class="money-img mt-2">
+			</div>
+			<div class="money-text2 mt-2">
+				0
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="menu-game">
+		<div class="d-flex">
+			<button class="back-btn">
+			</button>
+			<div class="game-name">
+				Астрономия
+			</div>
+			<div class="money-img mt-2">
+			</div>
+			<div class="money-text2 mt-2">
+				0
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="menu-game">
+		<div class="d-flex">
+			<button class="back-btn">
+			</button>
+			<div class="game-name"> 
+				Литература
+			</div>
+			<div class="money-img mt-2">
+			</div>
+			<div class="money-text2 mt-2">
+				0
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+			<div>
+				<div class="question1 rounded-pill">
+				</div>
+				<p class="question-text">
+					100
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+			<div>
+				<div class="question2 rounded-pill">
+				</div>
+				<p class="question-text">
+					200
+				</p>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+			<div>
+				<div class="question3 rounded-pill">
+				</div>
+				<p class="question-text">
+					300
+				</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let money = 1000;
+		let moneyDoc = document.querySelector('.money-text');
+		let moneyDoc2 = document.querySelectorAll('.money-text2');
+		let moneyDoc3 = document.querySelector('.money-text3');
+		moneyDoc.innerHTML = money;
+
+		let menu1 = document.querySelector('.menu');
+		let menu2 = document.querySelector('.menu-play');
+		let menuBtn = document.querySelectorAll('.menu-text2');
+		menuBtn[0].onclick = function() {
+			menu1.style.display = 'none';
+			menu2.style.display = 'block';
+		}
+
+		let topicText = document.querySelectorAll('.topic-text');
+		let topicTextLock = document.querySelectorAll('.topic-text-lock');
+		topicText[0].style.display = 'block';
+		let scoreFilmT = 0;
+		
+		let scoreFilmTDoc = document.querySelector('.film-score-t');
+
+		let rewardFilm = document.querySelector('.reward-film')
+		
+		
+		//let lock = document.querySelectorAll('.topic-lock');
+		//for(let i = 0; i < 3; i = i + 1) {
+		//	lock[i].onclick = function() {
+		//		if(money >= 1000) {
+		//			money = money - 1000;
+		//			moneyDoc.innerHTML = money;
+		//			alert('Вы купили эту тему');
+		//			topicTextLock[i].style.display = 'none';
+		//			topicText[i + 1].style.display = 'block';
+		//			lock[i].style.display = 'none';
+		//		}
+		//		else{
+		//			alert('Недостаточно монет, чтобы разблокировать тему');
+		//		}
+		//	}
+		//	topicTextLock[i].onclick = function() {
+		//		alert('Сначала нужно купить эту тему');
+		//	}
+		//}
+
+		let lockSoon = document.querySelectorAll('.topic-lock-soon');
+		let topicTextLockSoon = document.querySelectorAll('.topic-text-lock-soon');
+		for(let i = 0; i < 6; i = i + 1) {
+			lockSoon[i].onclick = function() {
+				alert('Станет доступным в ближайшем обновлении');
+			}
+			topicTextLockSoon[i].onclick = function() {
+				alert('Станет доступным в ближайшем обновлении');
+			}
+		}
+
+		let question = document.querySelectorAll('.question');
+		let menu3 = document.querySelectorAll('.menu-game');
+		for(let i = 0; i < 4; i++) {
+			topicText[i].onclick = function() {
+				menu2.style.display = 'none';
+				menu3[i].style.display = 'block';
+				moneyDoc2[i].innerHTML = money;
+			}
+		}
+
+		let backBtn = document.querySelectorAll('.back-btn');
+		for(let i = 0; i < 4; i++) {
+			backBtn[i].onclick = function() {
+				menu3[i].style.display = 'none';
+				menu2.style.display = 'block';
+				moneyDoc.innerHTML = money;
+			}	
+		}
+
+		let moviesQuest = ['Сколько фильмов в трилогии Гарри Поттера?', 'Сколько фильмов в трилогии Звездных войн?', 'Какое кол-во дублеров у Джеки Чана?', 'Какие очки были на терминаторе в первой части, после его перемещения во времени?', '', '', '', '', 'В каком году был снят фильм "Титаник"?', 'Какой кассовый сбор фильма "Мстители: Финал"?', 'Сколько фильмов во времена СССР смогли выйти на показ без цензуры?', '', '', '', '', '', 'Кто нарисовал картину ногой Розы в Титанике?', 'Как назывался фильм, который вышел на показ без цензуры во времена СССР?', '', ''];
+		let movies1 = ['5', '8', '5', 'В форме звезд', '', '', '', '', '1995', '2,7$ млрд', '0', '', '', '', '', '', 'Брэд Пит', 'Бриллиантовая рука', '', ''];
+		let movies2 = ['6', '10', '7', 'Круглые', '', '', '', '', '1997', '2,7$ млн', '1', '', '', '', '', '', 'Профессиональный художник', 'Собачье сердце', '', ''];
+		let movies3 = ['7', '11', '8', 'Черные пафосные', '', '', '', '', '1999', '3,4$ млрд', '2', '', '', '', '', '', 'Режиссёр', 'Джентельмены удачи', '', ''];
+		let movies4 = ['8', '14', '0', 'Самые обычные', '', '', '', '', '2002', '3,4$ млн', '3', '', '', '', '', '', 'Кейт Уинслет', 'Операция Ы', '', ''];
+		let questionQuest = document.querySelectorAll('.question-quest');
+		let questionBtn1 = document.querySelectorAll('.question-btn1');
+		let questionBtn2 = document.querySelectorAll('.question-btn2');
+		let questionBtn3 = document.querySelectorAll('.question-btn3');
+		let questionBtn4 = document.querySelectorAll('.question-btn4');	
+		let questionMenu = document.querySelector('.question-menu');
+		let backBtnQuest = document.querySelector('.back-btn-quest');
+		let questionLockY = document.querySelectorAll('.question-lockY');
+		let questionLockN = document.querySelectorAll('.question-lockN');
+		for(let i = 0; i < 20; i++) {
+			question[i].onclick = function() {
+				questionQuest[i].style.display = 'block';
+				questionBtn1[i].style.display = 'block';
+				questionBtn2[i].style.display = 'block';
+				questionBtn3[i].style.display = 'block';
+				questionBtn4[i].style.display = 'block';
+				menu3[0].style.display = 'none';
+				questionMenu.style.display = 'block';
+				moneyDoc3.innerHTML = money;
+				//100 кнопка 1
+								
+				//200 кнопка 1
+				questionBtn1[i].onclick = function() {
+					
+					alert('Неправильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockN[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+				}
+				questionBtn2[i].onclick = function() {
+					
+					alert('Неправильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockN[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+				}
+				questionBtn3[i].onclick = function() {
+					
+					alert('Неправильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockN[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+				}
+				questionBtn4[i].onclick = function() {
+					
+					alert('Неправильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockN[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+
+				}
+				questionBtn1[9].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				questionBtn1[18].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 300;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn1[7].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				questionBtn1[12].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				//300 кнопка 1
+				
+				//100 кнопка 2
+				questionBtn2[4].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn2[3].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				
+				//200 кнопка 2
+				questionBtn2[10].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn2[14].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				questionBtn2[8].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				questionBtn2[19].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 300;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				questionBtn2[15].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				
+				//300 кнопка 2
+				
+				//100 кнопка 3
+				questionBtn3[1].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn3[13].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn3[4].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn3[16].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 300;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn3[17].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 300;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}	
+				}
+				questionBtn3[11].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 200;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				
+				//300 кнопка 3
+				
+					
+				//100 кнопка 4
+				questionBtn4[2].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}
+				questionBtn4[0].onclick = function() {
+					scoreFilmT = scoreFilmT + 1;
+					scoreFilmTDoc.innerHTML = scoreFilmT;
+					money = money + 100;
+					alert('Правильно');	
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					question[i].style.display = 'none';
+					questionLockY[i].style.display = 'block';
+					moneyDoc2[0].innerHTML = money;
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';	
+					if (scoreFilmT == 5) {
+						rewardFilm.style.backgroundImage = 'url(bronze.png)';
+					}
+					if (scoreFilmT == 10) {
+						rewardFilm.style.backgroundImage = 'url(silver.png)';
+					}
+					if (scoreFilmT == 15) {
+						rewardFilm.style.backgroundImage = 'url(gold.png)';
+					}
+					if (scoreFilmT == 20) {
+						rewardFilm.style.backgroundImage = 'url(master.png)';
+					}
+				}	
+				//200 кнопка 4
+				
+				//300 кнопка 4
+				
+				backBtnQuest.onclick = function() {
+					questionMenu.style.display = 'none';
+					menu3[0].style.display = 'block';
+					questionQuest[i].style.display = 'none';
+					questionBtn1[i].style.display = 'none';
+					questionBtn2[i].style.display = 'none';
+					questionBtn3[i].style.display = 'none';
+					questionBtn4[i].style.display = 'none';
+					moneyDoc.innerHTML = money;
+				}	
+			}
+		}
+		
+		let profile = document.querySelector('.profile');
+		let nickname = document.querySelector('.nickname');
+		let playAvatar = document.querySelector('.play-avatar');
+		nickname.onclick = function() {
+			profile.style.display = 'block';
+			menu2.style.display = 'none';
+			nickname.style.display = 'none';
+		}
+		playAvatar.onclick = function() {
+			profile.style.display = 'block';
+			menu2.style.display = 'none';
+			nickname.style.display = 'none';
+		}
+		let profileBack = document.querySelector('.profile-back');
+		profileBack.onclick = function() {
+			profile.style.display = 'none';
+			menu2.style.display = 'block';
+			nickname.style.display = 'block';
+		}
+	</script>
+</body>
+</html>
